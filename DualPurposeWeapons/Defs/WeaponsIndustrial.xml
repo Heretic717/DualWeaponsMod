@@ -16,8 +16,8 @@
     <preExplosionSpawnThingDef>Filth_RubbleRock</preExplosionSpawnThingDef>
     <preExplosionSpawnChance>0.3</preExplosionSpawnChance>
     <shadowSize>0.6</shadowSize>
-    <speed>55</speed>
-    <explosionDelay>1</explosionDelay>
+    <speed>80</speed>
+    <explosionDelay>0</explosionDelay>
     <ai_IsIncendiary>false</ai_IsIncendiary>
 </projectile>
 </ThingDef>
@@ -25,7 +25,7 @@
 <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>DW_Brute_Shot</defName>
     <label>Bladed Launcher</label>
-    <description>A fully automatic small calliber grenade launcher with an attached blade for close quarters combat.</description>
+    <description>A fully automatic small calliber grenade launcher with an attached blade for close quarters combat. It is quite heavy and unwieldy</description>
     <graphicData>
         <texPath>Things/Item/Equipment/DualWeapons/Brute_Shot</texPath>
         <graphicClass>Graphic_Single</graphicClass>
@@ -35,12 +35,12 @@
     <soundInteract>Interact_Rifle</soundInteract>
     <statBases>
         <WorkToMake>10000</WorkToMake>
-        <Mass>6</Mass>
+        <Mass>10</Mass>
         <AccuracyTouch>0.80</AccuracyTouch>
         <AccuracyShort>0.90</AccuracyShort>
         <AccuracyMedium>0.85</AccuracyMedium>
         <AccuracyLong>0.70</AccuracyLong>
-        <RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
+        <RangedWeapon_Cooldown>2.3</RangedWeapon_Cooldown>
     </statBases>
     <costList>
         <Steel>100</Steel>
@@ -57,17 +57,17 @@
     </recipeMaker>
     <verbs>
         <li>
-            <verbClass>Verb_LaunchProjectile</verbClass>
+            <verbClass>Verb_Shoot</verbClass>
             <hasStandardCommand>true</hasStandardCommand>
             <defaultProjectile>DW_Brute_Shell</defaultProjectile>
-            <warmupTime>2.5</warmupTime>
-            <burstShotCount>3</burstShotCount>
-            <ticksBetweenBurstShots>22</ticksBetweenBurstShots>
+            <warmupTime>2</warmupTime>
+            <forcedMissRadius>0.1</forcedMissRadius>
+            <burstShotCount>2</burstShotCount>
+            <ticksBetweenBurstShots>20</ticksBetweenBurstShots>
             <range>22.9</range>
             <soundCast>Shot_SniperRifle</soundCast>
             <soundCastTail>GunTail_Light</soundCastTail>
             <muzzleFlashScale>14</muzzleFlashScale>
-            <forcedMissRadius>0</forcedMissRadius>
             <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
             <targetParams>
 				<canTargetLocations>true</canTargetLocations>
@@ -77,6 +77,9 @@
     <weaponTags>
     <li>GunHeavy</li>
     </weaponTags>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.15</MoveSpeed>
+    </equippedStatOffsets>
     <tools>
         <li>
             <label>blade</label>

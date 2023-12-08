@@ -7,18 +7,18 @@
 <graphicData>
     <texPath>Things/Projectile/Brute_Shot_Shell</texPath>
     <graphicClass>Graphic_Single</graphicClass>
-    <drawSize>0.9</drawSize>
+    <drawSize>0.7</drawSize>
 </graphicData>
 <thingClass>Projectile_Explosive</thingClass>
 <projectile>
     <damageDef>Bomb</damageDef>
-    <damageAmountBase>35</damageAmountBase>
     <explosionRadius>0.9</explosionRadius>
     <preExplosionSpawnThingDef>Filth_RubbleRock</preExplosionSpawnThingDef>
     <preExplosionSpawnChance>0.3</preExplosionSpawnChance>
     <shadowSize>0.6</shadowSize>
     <speed>55</speed>
     <explosionDelay>1</explosionDelay>
+    <ai_IsIncendiary>false</ai_IsIncendiary>
 </projectile>
 </ThingDef>
 
@@ -57,17 +57,18 @@
     </recipeMaker>
     <verbs>
         <li>
-            <verbClass>Verb_Shoot</verbClass>
+            <verbClass>Verb_LaunchProjectile</verbClass>
             <hasStandardCommand>true</hasStandardCommand>
-            <defaultProjectile>DW_Brute_Shot</defaultProjectile>
+            <defaultProjectile>DW_Brute_Shell</defaultProjectile>
             <warmupTime>2.5</warmupTime>
-            <burstShotCount>2</burstShotCount>
-            <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+            <burstShotCount>3</burstShotCount>
+            <ticksBetweenBurstShots>22</ticksBetweenBurstShots>
             <range>22.9</range>
-            <soundCast>Shot_Shotgun</soundCast>
+            <soundCast>Shot_SniperRifle</soundCast>
             <soundCastTail>GunTail_Light</soundCastTail>
             <muzzleFlashScale>14</muzzleFlashScale>
-            
+            <forcedMissRadius>0</forcedMissRadius>
+            <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
             <targetParams>
 				<canTargetLocations>true</canTargetLocations>
 			</targetParams>

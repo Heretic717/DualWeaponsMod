@@ -16,9 +16,9 @@
     <explosionRadius>0.9</explosionRadius>
     <preExplosionSpawnThingDef>Filth_RubbleRock</preExplosionSpawnThingDef>
     <preExplosionSpawnChance>0.3</preExplosionSpawnChance>
-    <ai_IsIncendiary>false</ai_IsIncendiary>
     <shadowSize>0.6</shadowSize>
     <speed>55</speed>
+    <explosionDelay>1</explosionDelay>
 </projectile>
 </ThingDef>
 
@@ -67,7 +67,7 @@
             <soundCast>Shot_Shotgun</soundCast>
             <soundCastTail>GunTail_Light</soundCastTail>
             <muzzleFlashScale>14</muzzleFlashScale>
-            <forcedMissRadius>0.9</forcedMissRadius>
+            
             <targetParams>
 				<canTargetLocations>true</canTargetLocations>
 			</targetParams>

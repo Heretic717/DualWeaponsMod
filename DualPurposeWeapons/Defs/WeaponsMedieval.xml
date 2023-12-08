@@ -57,7 +57,7 @@
 		<li>ElectricSmithy</li>
 	    </recipeUsers>
             <skillRequirements>
-                <Crafting></Crafting>
+                <Crafting>1</Crafting>
             </skillRequirements>
         </recipeMaker>
         <!--verbs are what the weapon does. -->
@@ -133,7 +133,7 @@
 	<li>ElectricSmithy</li>
 	</recipeUsers>
         <skillRequirements>
-            <Crafting></Crafting>
+            <Crafting>1</Crafting>
         </skillRequirements>
     </recipeMaker>
     <verbs>
@@ -222,7 +222,7 @@
 	<li>ElectricSmithy</li>
     </recipeUsers>
         <skillRequirements>
-            <Crafting></Crafting>
+            <Crafting>1</Crafting>
         </skillRequirements>
     </recipeMaker>
     <verbs>

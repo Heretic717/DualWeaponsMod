@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+<ThingDef ParentName="BaseBullet">
+<defName>DW_Brute_Shell</defName>
+<label>Explosive Shell</label>
+<graphicData>
+    <texPath>Things/Projectile/Brute_Shot_Shell</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    <drawSize>0.9</drawSize>
+</graphicData>
+<thingClass>Projectile_Explosive</thingClass>
+<projectile>
+    <damageDef>Bomb</damageDef>
+    <damageAmountBase>35</damageAmountBase>
+    <explosionRadius>0.9</explosionRadius>
+    <preExplosionSpawnThingDef>Filth_RubbleRock</preExplosionSpawnThingDef>
+    <preExplosionSpawnChance>0.3</preExplosionSpawnChance>
+    <ai_IsIncendiary>false</ai_IsIncendiary>
+    <shadowSize>0.6</shadowSize>
+    <speed>55</speed>
+</projectile>
+</ThingDef>
+
+<ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>DW_Brute_Shot</defName>
+    <label>Bladed Launcher</label>
+    <description>A fully automatic small calliber grenade launcher with an attached blade for close quarters combat.</description>
+    <graphicData>
+        <texPath>Things/Item/Equipment/DualWeapons/Brute_Shot</texPath>
+        <graphicClass>Graphic_Single</graphicClass>
+        <drawSize>1.2</drawSize>
+    </graphicData>
+    <uiIconScale>1</uiIconScale>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <statBases>
+        <WorkToMake>10000</WorkToMake>
+        <Mass>6</Mass>
+        <AccuracyTouch>0.80</AccuracyTouch>
+        <AccuracyShort>0.90</AccuracyShort>
+        <AccuracyMedium>0.85</AccuracyMedium>
+        <AccuracyLong>0.70</AccuracyLong>
+        <RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+        <Steel>100</Steel>
+        <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+    <recipeUsers>
+    <li>TableMachining</li>
+    </recipeUsers>
+    <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+        <skillRequirements>
+            <Crafting>4</Crafting>
+        </skillRequirements>
+    </recipeMaker>
+    <verbs>
+        <li>
+            <verbClass>Verb_Shoot</verbClass>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>DW_Brute_Shot</defaultProjectile>
+            <warmupTime>2.5</warmupTime>
+            <burstShotCount>2</burstShotCount>
+            <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+            <range>22.9</range>
+            <soundCast>Shot_Shotgun</soundCast>
+            <soundCastTail>GunTail_Light</soundCastTail>
+            <muzzleFlashScale>14</muzzleFlashScale>
+            <forcedMissRadius>0.9</forcedMissRadius>
+            <targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+        </li>
+    </verbs>
+    <weaponTags>
+    <li>GunHeavy</li>
+    </weaponTags>
+    <tools>
+        <li>
+            <label>blade</label>
+            <capacities>
+                <li>Cut</li>
+                <li>Stab</li>
+            </capacities>
+            <power>19</power>
+            <cooldownTime>2.0</cooldownTime>
+        </li>
+        <li>
+            <label>barrel</label>
+            <capacities>
+                <li>Blunt</li>
+                <li>Poke</li>
+            </capacities>
+            <power>10</power>
+            <cooldownTime>2.1</cooldownTime>
+        </li>
+    </tools>
+</ThingDef>  
+</Defs>

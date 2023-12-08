@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ModMetaData>
+<name>Dual purpose weapons</name>
+    <author>Heretic</author> 
+    <packageId>heretic.DualWeapons</packageId>
+    <description>This mod introduces several new weapons, specifically for use by pawns with high melee and high shooting.</description> <!-- Be creative, the description is what people will see when they look at your mod and don't leave space between description tags -->
+    <supportedVersions>
+     <li>1.4</li>
+    </supportedVersions> 
+</ModMetaData>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+<ThingDef ParentName="BaseBullet">
+<defName>DW_Charge_Bullet</defName>
+<label>Charged Bullet</label>
+<graphicData>
+    <texPath>Things/Projectile/Bullet_Charge</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    <drawSize>1.1</drawSize>
+</graphicData>
+<projectile>
+    <damageDef>Bullet</damageDef>
+    <damageAmountBase>20</damageAmountBase>
+    <armorPenetrationBase>0.40</armorPenetrationBase>
+    <stoppingPower>1.5</stoppingPower>
+    <speed>70</speed>
+</projectile>
+</ThingDef>
+
+<ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>DW_Mono_Charge_Halberd</defName>
+    <label>Charge Polearm</label>
+    <description>A monoblade polearm fitted with a modified charge rifle. The perfect weapon for elite honor guards and versatile combatants alike.</description>
+    <graphicData>
+        <texPath>Things/Item/Equipment/DualWeapons/Charge_Polearm</texPath>
+        <graphicClass>Graphic_Single</graphicClass>
+        <drawSize>1.2</drawSize>
+    </graphicData>
+    <uiIconScale>1</uiIconScale>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <equippedAngleOffset>45</equippedAngleOffset>
+    <statBases>
+        <WorkToMake>45000</WorkToMake>
+        <Mass>6</Mass>
+        <AccuracyTouch>0.60</AccuracyTouch>
+        <AccuracyShort>0.70</AccuracyShort>
+        <AccuracyMedium>0.60</AccuracyMedium>
+        <AccuracyLong>0.55</AccuracyLong>
+        <RangedWeapon_Cooldown>2.2</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+        <li>SpacerGun</li>
+    </weaponTags>
+    <costList>
+        <Plasteel>70</Plasteel>
+        <ComponentSpacer>3</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+    <recipeUsers>
+    <li>FabricationBench</li>
+    </recipeUsers>
+    <researchPrerequisite>ChargedShot</researchPrerequisite>
+        <skillRequirements>
+            <Crafting>7</Crafting>
+        </skillRequirements>
+    </recipeMaker>
+    <verbs>
+        <li>
+            <verbClass>Verb_Shoot</verbClass>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>DW_Charge_Bullet</defaultProjectile>
+            <warmupTime>1.2</warmupTime>
+            <burstShotCount>2</burstShotCount>
+            <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+            <range>23.9</range>
+            <soundCast>Shot_ChargeRifle</soundCast>
+            <soundCastTail>GunTail_Medium</soundCastTail>
+            <muzzleFlashScale>9</muzzleFlashScale>
+        </li>
+    </verbs>
+    <tools>
+        <li>
+            <label>haft</label>
+            <capacities>
+                <li>Blunt</li>
+                <li>Poke</li>
+            </capacities>
+            <power>9</power>
+            <cooldownTime>2.6</cooldownTime>
+        </li>
+        <li>
+            <label>blade</label>
+            <capacities>
+                <li>Cut</li>
+                <li>Stab</li>
+            </capacities>
+            <power>25</power>
+            <cooldownTime>2</cooldownTime>
+            <armorPenetration>0.9</armorPenetration>
+        </li>
+    </tools>
+</ThingDef>
+
+</Defs>

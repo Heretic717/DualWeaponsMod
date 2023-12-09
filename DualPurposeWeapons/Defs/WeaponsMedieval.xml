@@ -145,8 +145,8 @@
             <burstShotCount>1</burstShotCount>
             <ticksBetweenBurstShots>22</ticksBetweenBurstShots>
             <range>26.9</range>
-            <soundCast>Shot_Revolver</soundCast>
-            <soundCastTail>GunTail_Light</soundCastTail>
+            <soundCast>Shot_SniperRifle</soundCast>
+            <soundCastTail>GunTail_Heavy</soundCastTail>
             <muzzleFlashScale>8</muzzleFlashScale>
         </li>
     </verbs>
@@ -235,7 +235,7 @@
             <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
             <range>12.9</range>
             <soundCast>Shot_Revolver</soundCast>
-            <soundCastTail>GunTail_Light</soundCastTail>
+            <soundCastTail>GunTail_Medium</soundCastTail>
             <muzzleFlashScale>8</muzzleFlashScale>
         </li>
     </verbs>

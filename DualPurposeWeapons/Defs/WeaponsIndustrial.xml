@@ -34,7 +34,7 @@
     <uiIconScale>1</uiIconScale>
     <soundInteract>Interact_Rifle</soundInteract>
     <statBases>
-        <WorkToMake>10000</WorkToMake>
+        <WorkToMake>12000</WorkToMake>
         <Mass>10</Mass>
         <AccuracyTouch>0.80</AccuracyTouch>
         <AccuracyShort>0.90</AccuracyShort>
@@ -66,8 +66,8 @@
             <ticksBetweenBurstShots>20</ticksBetweenBurstShots>
             <range>22.9</range>
             <soundCast>Shot_SniperRifle</soundCast>
-            <soundCastTail>GunTail_Light</soundCastTail>
-            <muzzleFlashScale>14</muzzleFlashScale>
+            <soundCastTail>GunTail_Heavy</soundCastTail>
+            <muzzleFlashScale>13</muzzleFlashScale>
             <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
             <targetParams>
 				<canTargetLocations>true</canTargetLocations>

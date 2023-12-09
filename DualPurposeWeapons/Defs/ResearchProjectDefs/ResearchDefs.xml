@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+    
+    <ResearchProjectDef>
+        <defName>DW_Gunpowder</defName>
+        <label>gunpowder</label>
+        <description>Craft early firearms and gun-blades.</description>
+        <baseCost>1600</baseCost>
+        <techLevel>Medieval</techLevel>
+        <prerequisites>
+	        <li>Smithing</li>
+            <li>LongBlades</li>
+        </prerequisites>
+  <researchViewX>3.00</researchViewX>
+  <researchViewY>0.15</researchViewY>
+    </ResearchProjectDef>
+
+</Defs>

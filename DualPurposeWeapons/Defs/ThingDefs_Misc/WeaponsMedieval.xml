@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+<ThingDef ParentName="BaseBullet">
+        <defName>DW_MedievalBullet</defName>
+        <label>Musket Ball</label>
+        <graphicData>
+            <texPath>Things/Projectile/Bullet_Musket</texPath> 
+             
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.7</drawSize> 
+        </graphicData>
+        <projectile>
+            
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>16</damageAmountBase>
+            <stoppingPower>2</stoppingPower>
+            <speed>65</speed>
+        </projectile>
+</ThingDef>
+<ThingDef ParentName="BaseHumanMakeableGun">
+        <defName>DW_AxeGun_Small</defName>
+        <label>Pistol Axe</label>
+        <description>A flintlock pistol with an elongated handle and an attached axe blade.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/DualWeapons/GunAxe</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <uiIconScale>1.4</uiIconScale>
+        <soundInteract>Interact_Revolver</soundInteract>
+        
+        <statBases>
+            <WorkToMake>2000</WorkToMake>
+            <Mass>3.6</Mass>
+            <AccuracyTouch>0.95</AccuracyTouch>
+            <AccuracyShort>0.90</AccuracyShort>
+            <AccuracyMedium>0.75</AccuracyMedium>
+            <AccuracyLong>0.70</AccuracyLong>
+            <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+        </statBases>
+        
+        <weaponTags>
+            <li>NeolithicRangedHeavy</li>
+	        <li>NeolithicRangedChief</li>
+        </weaponTags>
+        
+        <costList>
+            <Steel>20</Steel>
+            <WoodLog>25</WoodLog>
+        </costList>
+        
+        <recipeMaker>
+        <researchPrerequisite>DW_Gunpowder</researchPrerequisite>
+        <recipeUsers Inherit="False">
+		<li>FueledSmithy</li>
+		<li>ElectricSmithy</li>
+	    </recipeUsers>
+            <skillRequirements>
+                <Crafting>1</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+        
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                
+                <defaultProjectile>DW_MedievalBullet</defaultProjectile>
+                <warmupTime>1.0</warmupTime>
+                <burstShotCount>1</burstShotCount>
+                <ticksBetweenBurstShots>22</ticksBetweenBurstShots>
+                <range>21.9</range>
+                <soundCast>Shot_Revolver</soundCast>
+                <soundCastTail>GunTail_Light</soundCastTail>
+                <muzzleFlashScale>8</muzzleFlashScale>
+            </li>
+        </verbs>
+        
+        <tools>
+            <li>
+                <label>handle</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2.5</cooldownTime>
+            </li>
+            
+            <li>
+                <label>blade</label>
+                <capacities>
+                    <li>Cut</li>
+                </capacities>
+                <power>14</power>
+                <cooldownTime>2.0</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+   <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>DW_AxeGun_Large</defName>
+    <label>Rifle Axe</label>
+    <description>A flintlock rifle with an elongated handle and an attached axe blade.</description>
+    <graphicData>
+        <texPath>Things/Item/Equipment/DualWeapons/RifleAxe</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconScale>1</uiIconScale>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <statBases>
+        <WorkToMake>2200</WorkToMake>
+        <Mass>5.6</Mass>
+        <AccuracyTouch>0.70</AccuracyTouch>
+        <AccuracyShort>0.80</AccuracyShort>
+        <AccuracyMedium>0.95</AccuracyMedium>
+        <AccuracyLong>0.90</AccuracyLong>
+        <RangedWeapon_Cooldown>3.4</RangedWeapon_Cooldown>
+    </statBases>
+    <equippedAngleOffset>45</equippedAngleOffset>
+    <weaponTags>
+        <li>NeolithicRangedHeavy</li>
+	    <li>NeolithicRangedChief</li>
+    </weaponTags>
+    <costList>
+        <Steel>30</Steel>
+        <WoodLog>40</WoodLog>
+    </costList>
+    <recipeMaker>
+    <researchPrerequisite>DW_Gunpowder</researchPrerequisite>
+    <recipeUsers Inherit="False">
+	<li>FueledSmithy</li>
+	<li>ElectricSmithy</li>
+	</recipeUsers>
+        <skillRequirements>
+            <Crafting>1</Crafting>
+        </skillRequirements>
+    </recipeMaker>
+    <verbs>
+        <li>
+            <verbClass>Verb_Shoot</verbClass>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>DW_MedievalBullet</defaultProjectile>
+            <warmupTime>1.55</warmupTime>
+            <burstShotCount>1</burstShotCount>
+            <ticksBetweenBurstShots>22</ticksBetweenBurstShots>
+            <range>26.9</range>
+            <soundCast>Shot_SniperRifle</soundCast>
+            <soundCastTail>GunTail_Heavy</soundCastTail>
+            <muzzleFlashScale>8</muzzleFlashScale>
+        </li>
+    </verbs>
+    <tools>
+        <li>
+            <label>handle</label>
+            <capacities>
+                <li>Blunt</li>
+                <li>Poke</li>
+            </capacities>
+            <power>10</power>
+            <cooldownTime>2.0</cooldownTime>
+        </li>
+        <li>
+            <label>blade</label>
+            <capacities>
+                <li>Cut</li>
+            </capacities>
+            <power>19</power>
+            <cooldownTime>2.0</cooldownTime>
+        </li>
+    </tools>
+   </ThingDef>
+
+   <ThingDef ParentName="BaseBullet">
+   <defName>DW_Buckshot</defName>
+   <label>Birdshot</label>
+   <graphicData>
+    <texPath>Things/Projectile/Bullet_Buckshot</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    <drawSize>0.9</drawSize>
+   </graphicData>
+   <projectile>
+    <damageDef>Bullet</damageDef>
+    <damageAmountBase>16</damageAmountBase>
+    <stoppingPower>3.5</stoppingPower>
+    <speed>60</speed>
+   </projectile>
+   </ThingDef>
+
+   <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>DW_FireLance</defName>
+    <label>Fire Lance</label>
+    <description>A standard spear with a small barrel attached to the haft. It can be used as a makeshift shotgun.</description>
+    <graphicData>
+        <texPath>Things/Item/Equipment/DualWeapons/Fire_Lance</texPath>
+        <graphicClass>Graphic_Single</graphicClass>
+        <drawSize>1.2</drawSize>
+    </graphicData>
+    <uiIconScale>1</uiIconScale>
+    <soundInteract>Interact_Shotgun</soundInteract>
+    <statBases>
+        <WorkToMake>1800</WorkToMake>
+        <Mass>3.2</Mass>
+        <AccuracyTouch>0.95</AccuracyTouch>
+        <AccuracyShort>0.90</AccuracyShort>
+        <AccuracyMedium>0.70</AccuracyMedium>
+        <AccuracyLong>0.65</AccuracyLong>
+        <RangedWeapon_Cooldown>2.6</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+        <li>NeolithicRangedHeavy</li>
+        <li>NeolithicRangedHeavy</li>
+    </weaponTags>
+    <costList>
+        <Steel>15</Steel>
+        <WoodLog>35</WoodLog>
+    </costList>
+    <recipeMaker>
+    <researchPrerequisite>DW_Gunpowder</researchPrerequisite>
+    <recipeUsers Inherit="False">
+    <li>FueledSmithy</li>
+	<li>ElectricSmithy</li>
+    </recipeUsers>
+        <skillRequirements>
+            <Crafting>1</Crafting>
+        </skillRequirements>
+    </recipeMaker>
+    <verbs>
+        <li>
+            <verbClass>Verb_Shoot</verbClass>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>DW_Buckshot</defaultProjectile>
+            <warmupTime>1.4</warmupTime>
+            <burstShotCount>1</burstShotCount>
+            <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+            <range>12.9</range>
+            <soundCast>Shot_Shotgun</soundCast>
+            <soundCastTail>GunTail_Medium</soundCastTail>
+            <muzzleFlashScale>8</muzzleFlashScale>
+        </li>
+    </verbs>
+    <tools>
+        <li>
+            <label>haft</label>
+            <capacities>
+                <li>Blunt</li>
+                <li>Poke</li>
+            </capacities>
+            <power>9</power>
+            <cooldownTime>2.1</cooldownTime>
+        </li>
+        <li>
+            <label>barrel</label>
+            <capacities>
+                <li>Blunt</li>
+            </capacities>
+            <power>10</power>
+            <cooldownTime>2.1</cooldownTime>
+        </li>
+        <li>
+            <label>blade</label>
+            <capacities>
+                <li>Cut</li>
+                <li>Stab</li>
+            </capacities>
+            <power>14</power>
+            <cooldownTime>1.7</cooldownTime>
+        </li>
+
+    </tools>
+   </ThingDef>
+
+</Defs>    

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+<ThingDef ParentName="BaseBullet">
+<defName>DW_Brute_Shell</defName>
+<label>Explosive Shell</label>
+<graphicData>
+    <texPath>Things/Projectile/Brute_Shot_Shell</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    <drawSize>0.65</drawSize>
+</graphicData>
+<thingClass>Projectile_Explosive</thingClass>
+<projectile>
+    <damageDef>Bomb</damageDef>
+    <explosionRadius>0.9</explosionRadius>
+    <preExplosionSpawnThingDef>Filth_RubbleRock</preExplosionSpawnThingDef>
+    <preExplosionSpawnChance>0.3</preExplosionSpawnChance>
+    <shadowSize>0.6</shadowSize>
+    <speed>80</speed>
+    <explosionDelay>0</explosionDelay>
+    <ai_IsIncendiary>false</ai_IsIncendiary>
+</projectile>
+</ThingDef>
+
+<ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>DW_Brute_Shot</defName>
+    <label>Bladed Launcher</label>
+    <description>A fully automatic small calliber grenade launcher with an attached blade for close quarters combat. It is quite heavy and unwieldy</description>
+    <graphicData>
+        <texPath>Things/Item/Equipment/DualWeapons/Brute_Shot</texPath>
+        <graphicClass>Graphic_Single</graphicClass>
+        <drawSize>1.4</drawSize>
+    </graphicData>
+    <uiIconScale>1</uiIconScale>
+    <soundInteract>DW_Interact_Launcher</soundInteract>
+    <statBases>
+        <WorkToMake>12000</WorkToMake>
+        <Mass>10</Mass>
+        <AccuracyTouch>0.80</AccuracyTouch>
+        <AccuracyShort>0.90</AccuracyShort>
+        <AccuracyMedium>0.85</AccuracyMedium>
+        <AccuracyLong>0.70</AccuracyLong>
+        <RangedWeapon_Cooldown>2.3</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+        <Steel>100</Steel>
+        <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+    <recipeUsers>
+    <li>TableMachining</li>
+    </recipeUsers>
+    <researchPrerequisite>GasOperation</researchPrerequisite>
+        <skillRequirements>
+            <Crafting>4</Crafting>
+        </skillRequirements>
+    </recipeMaker>
+    <verbs>
+        <li>
+            <verbClass>Verb_Shoot</verbClass>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>DW_Brute_Shell</defaultProjectile>
+            <warmupTime>2</warmupTime>
+            <forcedMissRadius>0.1</forcedMissRadius>
+            <burstShotCount>2</burstShotCount>
+            <ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+            <range>22.9</range>
+            <soundCast>DW_Shot_Launcher</soundCast>
+            <soundCastTail>GunTail_Heavy</soundCastTail>
+            <muzzleFlashScale>13</muzzleFlashScale>
+            <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+            <targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+        </li>
+    </verbs>
+    <weaponTags>
+    <li>GunHeavy</li>
+    </weaponTags>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.15</MoveSpeed>
+    </equippedStatOffsets>
+    <tools>
+        <li>
+            <label>blade</label>
+            <capacities>
+                <li>Cut</li>
+                <li>Stab</li>
+            </capacities>
+            <power>19</power>
+            <cooldownTime>2.0</cooldownTime>
+        </li>
+        <li>
+            <label>barrel</label>
+            <capacities>
+                <li>Blunt</li>
+                <li>Poke</li>
+            </capacities>
+            <power>10</power>
+            <cooldownTime>2.1</cooldownTime>
+        </li>
+    </tools>
+</ThingDef>  
+</Defs>

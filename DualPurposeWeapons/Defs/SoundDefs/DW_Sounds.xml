@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+    
+    <SoundDef>
+    <defName>DW_Shot_Launcher</defName>  
+    <context>MapOnly</context>
+    <eventNames />  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/DW_Shot_Launcher</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>
+          <min>100.58823</min>        
+          <max>100.58823</max>
+        </volumeRange>
+		<pitchRange>
+          <min>0.6976015</min>        
+          <max>0.7769372</max>
+        </pitchRange>	
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>DW_Interact_Launcher</defName>  
+    <context>MapOnly</context>
+    <eventNames />  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/DW_Interact_Launcher</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>
+          <min>40.58823</min>        
+          <max>40.58823</max>
+        </volumeRange>
+		<pitchRange>
+          <min>0.6976015</min>        
+          <max>0.7769372</max>
+        </pitchRange>	
+      </li>
+    </subSounds>
+  </SoundDef>
+
+</Defs>
